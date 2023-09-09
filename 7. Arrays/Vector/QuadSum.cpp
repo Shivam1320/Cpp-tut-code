@@ -1,0 +1,38 @@
+//Quad Sum - with 1 array
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main(){
+    vector<int> arr{10, 20, 40, 60, 70, 30};
+    int sum = 100;
+
+    //print all pairs
+    for(int i = 0; i<arr.size(); i++){
+        int element1 = arr[i];
+
+        for(int j = i+1; j<arr.size(); j++){
+            int element2 = arr[j];
+
+            for(int k = j+1; k<arr.size(); k++){
+                int element3 = arr[k];
+
+                for(int l = j+1; l<arr.size(); l++){
+                    int element4 = arr[l];
+   
+                if(element1 + element2 + element3 + element4 == sum ){
+                cout<<"Pair found: "<<"(" << element1 << "," << element2 << "," << element3<< "," << element4 <<")" << endl;
+                }
+
+
+            }
+            //cout<< "(" << element1 << "," << element2 << "," << arr[k] <<")" << endl;
+            }
+            
+        }
+    }
+
+
+return 0;
+}
